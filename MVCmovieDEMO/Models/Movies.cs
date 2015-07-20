@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Data.Entity;
 
 namespace MVCmovieDEMO.Models
 {
@@ -13,5 +11,10 @@ namespace MVCmovieDEMO.Models
         public DateTime ReleaseDate { get; set; }
         public string Genre { get; set; }
         public decimal Price { get; set; }
+    }
+
+    public class MovieDBContext : DbContext
+    {
+        public DbSet<Movies> Movies { get; set; }
     }
 }
